@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 public class Adapter extends PagerAdapter {
+
+
     @Override
     public int getCount() {
         return 0;
