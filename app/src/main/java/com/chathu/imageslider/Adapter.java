@@ -31,5 +31,7 @@ public class Adapter extends PagerAdapter {
         ImageView imageView = new ImageView(ctx);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setImageResource(ImageArray[position]);
+        container.addView(imageView,0);
+        return imageView;
     }
 }
