@@ -22,7 +22,7 @@ public class Adapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return false;
+        return view == object;
     }
 
     @NonNull
@@ -33,5 +33,10 @@ public class Adapter extends PagerAdapter {
         imageView.setImageResource(ImageArray[position]);
         container.addView(imageView,0);
         return imageView;
+    }
+
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView((ImageView) object);
     }
 }
